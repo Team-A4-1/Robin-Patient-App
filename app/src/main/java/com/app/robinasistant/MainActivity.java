@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 System.out.println("test");
                 activitySwitch Switch = new activitySwitch();
+                Switch.setContext(getApplicationContext());
                 Switch.Switch(0);
+
             }
         });
     }

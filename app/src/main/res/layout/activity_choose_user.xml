@@ -6,17 +6,131 @@
     android:layout_height="match_parent"
     tools:context=".ChooseUser">
 
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="228dp"
-        android:layout_marginBottom="462dp"
-        android:text="test"
+    <ImageView
+        android:id="@+id/testimage"
+        android:layout_width="34dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="373dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/Oranje"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <ScrollView
+        android:layout_width="413dp"
+        android:layout_height="672dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testimage">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/users"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/corners1"
+                                android:layout_width="140dp"
+                                android:layout_height="140dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginEnd="25dp"
+                                android:background="@color/white"
+                                app:cardCornerRadius="360dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/testo1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/mike_andrei_433" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/userName1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="name"
+                                android:textSize="30sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.495"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/corners1"
+                                app:layout_constraintVertical_bias="0.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/corners"
+                                android:layout_width="140dp"
+                                android:layout_height="140dp"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginEnd="40dp"
+                                android:background="@color/white"
+                                app:cardCornerRadius="360dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/testo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/mike_andrei_433" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/userName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="name"
+                                android:textSize="30sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/corners"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

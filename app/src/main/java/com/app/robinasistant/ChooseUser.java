@@ -7,6 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -34,8 +35,8 @@ for(int i=0;i<amount;i++){
         CardView corners = new CardView(this);
         corners.setId(View.generateViewId());
         corners.setLayoutParams(new FrameLayout.LayoutParams(
-                350,
-                350
+                360,
+                360
         ));
         corners.setRadius(360);
 
@@ -58,7 +59,7 @@ for(int i=0;i<amount;i++){
         ConstraintLayout cons = new ConstraintLayout(this);
         cons.setId(View.generateViewId());
         cons.setLayoutParams(new ViewGroup.LayoutParams(
-                ConstraintLayout.LayoutParams.MATCH_PARENT,
+                ConstraintLayout.LayoutParams.WRAP_CONTENT,
                 ConstraintLayout.LayoutParams.WRAP_CONTENT
         ));
         //add corneres
@@ -76,11 +77,8 @@ for(int i=0;i<amount;i++){
 
         linear.setId(View.generateViewId());
         linear.setOrientation(LinearLayout.HORIZONTAL);
-//            linear.setLayoutParams(new LinearLayout.LayoutParams(
-//                   100,
-//                   100
-//
-//                    ));
+
+
 
 
         //create tabel row
@@ -102,13 +100,13 @@ for(int i=0;i<amount;i++){
 
         //constrainset image
         constraintSet.connect(corners.getId(), ConstraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
-        constraintSet.connect(corners.getId(), ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 1);
+        constraintSet.connect(corners.getId(), ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 130);
         constraintSet.connect(corners.getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 1);
 
         //constrainset text
         constraintSet.connect(text.getId(), ConstraintSet.TOP, corners.getId(), ConstraintSet.BOTTOM, 10);
         constraintSet.connect(text.getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
-        constraintSet.connect(text.getId(), ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
+        constraintSet.connect(text.getId(), ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 100);
 //        constraintSet.applyTo(cons);
 
 
